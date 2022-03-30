@@ -115,7 +115,7 @@ def upload_file():
                     user.imageURL =  f"{IMAGES_ROOT}{filename}" 
                     user.save()
                     flash('Changed image successfully!!!')
-                    return redirect(url_for('image_file', filename=filename))
+                    return redirect(url_for('upload_file'))
                 else:
                     flash('Not supported image', 'error')
             else:
